@@ -1,0 +1,23 @@
+{
+  "name": "css-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "milligram": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adibemohamed/soss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adibemohamed/Mawza.css/issues"
+  },
+  "homepage": "https://github.com/adibemohamed/Mawza.css#readme"
+}
