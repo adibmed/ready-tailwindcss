@@ -1,3 +1,4 @@
-
-
-/*# sourceMappingURL=index.css.map */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
