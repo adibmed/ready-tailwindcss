@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "milligram": "^1.4.1"
+    "milligram": "^1.4.1",
+    "node-sass": "^5.0.0"
   },
   "devDependencies": {},
   "scripts": {
