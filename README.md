@@ -1,2 +1,2 @@
-<img src="./dejja-css.png">
+<img src="./pretty-css.png">
 # MAWZACSS
