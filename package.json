@@ -1,8 +1,8 @@
 {
-  "name": "css-lib",
+  "name": "pretty",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Pretty css",
+  "main": "index.html",
   "dependencies": {
     "milligram": "^1.4.1",
     "node-sass": "^5.0.0"
@@ -12,11 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "node-sass pretty/src/pretty.sass pretty/dist/index.css && node-sass pretty/src/pretty.sass index.css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adibemohamed/soss.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/adibemohamed/soss.git",
+  "author": "adibemohamed <mr.eladib.mohamed@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/adibemohamed/Mawza.css/issues"
