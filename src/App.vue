@@ -9,7 +9,4 @@ import Header from './components/Header.vue'
 </template>
 
 <style>
-body {
-  background-color: rgb(162, 0, 255);
-}
 </style>
