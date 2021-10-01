@@ -1,8 +1,3 @@
-<template>
-<Navbar/>
-  <div>components</div>
-</template>
-
 <script>
 import Navbar from '../../components/Navbar.vue'
 export default {
@@ -11,6 +6,12 @@ export default {
   name: "Components"
 }
 </script>
+
+
+<template>
+<Navbar/>
+  <div>components</div>
+</template>
 
 <style>
 

@@ -1,4 +1,16 @@
-<template>
+<script>
+export default {
+name: "Navbar",
+computed: {
+    currentRouteName() {
+        return this.$route.name;
+    }
+}
+}
+</script>
+
+
+<template> 
     <nav class="bg-green-300">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between py-3">
@@ -23,50 +35,55 @@
             </router-link>
           <div class="block ml-6">
             <div class="flex space-x-4">
-              <a
-                href="#"
+              <span
+              :class="currentRouteName === 'home' ? 'bg-green-200 text-green-200':''"
                 class="
-                  text-gray-600
+                  text-green-900
                   hover:bg-green-200
                   hover:text-green-700
                   px-3
                   py-2
+                  delay-75
                   rounded-md
-                  font-medium
+                  font-bold
                 "
-                ><router-link :to="{name: 'home'}">Home</router-link></a
+                ><router-link :to="{name: 'home'}">Home</router-link></span
               >
-              <a
-                href="#"
+              <span
+              :class="currentRouteName === 'components' ? 'bg-green-200 text-green-200':''"
+               
                 class="
-                  text-gray-600
+                  text-green-900
                   hover:bg-green-200
                   hover:text-green-700
                   px-3
                   py-2
+                  delay-75
                   rounded-md
-                  font-medium
+                  font-bold
                 "
-                ><router-link :to="{name: 'components'}">Components</router-link></a
+                ><router-link :to="{name: 'components'}">Components</router-link></span
               >
-              <a
-                href="#"
+              <span
+              :class="currentRouteName === 'about' ? 'bg-green-200 text-green-200':''"
+               
                 class="
-                  text-gray-600
+                  text-green-900
                   hover:bg-green-200
                   hover:text-green-700
                   px-3
                   py-2
+                  delay-75
                   rounded-md
-                  font-medium
+                  font-bold
                 "
-                ><router-link :to="{name: 'about'}">About</router-link></a
+                ><router-link :to="{name: 'about'}">About</router-link></span
               >
             </div>
           </div>
         </div>
         <div class="h-7 w-7 text-gray-800">
-          <a href="https://github.com/adibemohamed/ready-tailwindcss" target="_blank">
+          <span href="https://github.com/adibemohamed/ready-tailwindcss" target="_blank">
             <svg
             version="1.1"
             class="h-full w-full"
@@ -110,7 +127,7 @@
             <g></g>
             <g></g>
           </svg>
-          </a>
+          </span>
         </div>
       </div>
     </div>
@@ -118,11 +135,6 @@
   </nav>
 </template>
 
-<script>
-export default {
-name: "Navbar"
-}
-</script>
 
 <style>
 
