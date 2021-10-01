@@ -10,7 +10,9 @@ export default {
 
 <template>
 <Navbar/>
-  <div>components</div>
+<div class="max-w-7xl mx-auto">
+  Compoennts
+</div>
 </template>
 
 <style>

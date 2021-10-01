@@ -34,51 +34,49 @@ computed: {
           </div>
             </router-link>
           <div class="block ml-6">
-            <div class="flex space-x-4">
-              <span
+            <div class="flex items-center space-x-4">
+              <router-link :to="{name: 'home'}"><span
               :class="currentRouteName === 'home' ? 'bg-green-200 text-green-200':''"
                 class="
                   text-green-900
                   hover:bg-green-200
                   hover:text-green-700
-                  px-3
-                  py-2
+                  p-3
                   delay-75
                   rounded-md
                   font-bold
                 "
-                ><router-link :to="{name: 'home'}">Home</router-link></span
-              >
-              <span
+                >Home</span
+              ></router-link>
+              
+              <router-link :to="{name: 'components'}"><span
               :class="currentRouteName === 'components' ? 'bg-green-200 text-green-200':''"
                
                 class="
                   text-green-900
                   hover:bg-green-200
                   hover:text-green-700
-                  px-3
-                  py-2
+                  p-3
                   delay-75
                   rounded-md
                   font-bold
                 "
-                ><router-link :to="{name: 'components'}">Components</router-link></span
-              >
-              <span
+                >Components</span
+              ></router-link>
+              <router-link :to="{name: 'about'}"><span
               :class="currentRouteName === 'about' ? 'bg-green-200 text-green-200':''"
                
                 class="
                   text-green-900
                   hover:bg-green-200
                   hover:text-green-700
-                  px-3
-                  py-2
+                  p-3
                   delay-75
                   rounded-md
                   font-bold
                 "
-                ><router-link :to="{name: 'about'}">About</router-link></span
-              >
+                >About</span
+              ></router-link>
             </div>
           </div>
         </div>
