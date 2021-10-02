@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+ 
 
 .bouncer {
   animation: bouncer linear 4s;

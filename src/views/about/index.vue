@@ -1,5 +1,6 @@
 <script>
 import Navbar from "../../components/Navbar.vue";
+import contributorsJSON from './contributors.json'
 
 export default {
   components: { Navbar },
@@ -8,6 +9,7 @@ export default {
 
   data() {
     return {
+      contributors: contributorsJSON,
       section_1: {
         title: "UI Components",
         message: `Free and open source ui components to use for your projects and apps.
@@ -15,6 +17,7 @@ export default {
                   need to reinvent the wheel and start everything from scatch everytime your start a project. 
                   Just copy and paste any component and Voila!`,
       },
+      
     };
   },
 };
@@ -51,19 +54,20 @@ export default {
       </div>  
   </div>
 
-     <div class="max-w-7xl mx-auto pb-12 bg-gray-100 shadow-lg rounded-3xl  p-8 mt-32 mb-32">   
+     <div class="max-w-7xl mx-auto pb-12 bg-gray-100 shadow-lg rounded-3xl  p-1 sm:p-8 mt-32 mb-32">   
        
           <div class="text-2xl sm:text-4xl font-bold text-center pt-8 pb-4 text-gray-700">Contributors</div>
-       <div class="pt-8 grid grid-cols-7 gap-4">
+       <div class="pt-8 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-7 gap-1 sm:gap-4">
         <a
-        v-for="i in 10"
-        :key="i"
-        href="#"
+        v-for="(contributor, index) in contributors"
+        :key="index"
+        :href="contributor.github_url"
+        target="_blank"
          class="shadow-sm rounded-lg px-2 pt-2 pb-4 bg-white hover:shadow-md hover:border">
          <div class="flex justify-center py-4">
-          <img src="https://avatars.githubusercontent.com/u/12994887?v=4" class="w-2/3 rounded-full rounded-bl-none" alt=""></div>
-          <div class="pt-2 font-semibold text-gray-700">Mohamed Eladib</div>
-          <div class="text-gray-600 text-sm">@adibemohamed</div>
+          <img :src="contributor.profile_image" class="w-2/3 rounded-full rounded-bl-none" :alt="contributor.github_url"></div>
+          <div class="pt-2 font-semibold text-gray-700">{{contributor.display_name}}</div>
+          <div class="text-gray-600 text-sm">@{{contributor.username}}</div>
         </a>
         
       </div>
