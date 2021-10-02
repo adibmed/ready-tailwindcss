@@ -3,18 +3,23 @@ import Navbar from "../../components/Navbar.vue";
 import Container from "./Container.vue";
 import componentsJSON from "./components.json";
 import Buttons from "./Buttons/index.vue";
+import ProductCard from "./ProductCard/index.vue";
 
 export default {
   name: "Components",
-  
-  components: { Navbar, Container, Buttons },
-  
+
+  components: {
+    Navbar,
+    Container,
+    Buttons,
+    ProductCard,
+  },
+
   data() {
     return {
       components: componentsJSON,
     };
   },
-
 };
 </script>
 
@@ -27,10 +32,12 @@ export default {
       <template #component>
         <Buttons />
       </template>
-      <template #html>
-        <div class="bg-red-300">
-          <span>hello</span>
-        </div>
+    </Container>
+
+    <Container :html="components.product_card">
+      <template #title>Product Card</template>
+      <template #component>
+        <ProductCard />
       </template>
     </Container>
   </div>

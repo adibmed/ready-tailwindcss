@@ -1,4 +1,5 @@
 {
-  "buttons": "<button>click me</button>",
-  "alerts": "<div>alrt</div>"
+  "buttons": "<div class='flex'>\n<button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>\nButton\n</button>\n</div>",
+  "product_card": "",
+  "example": "<div class='p-3 rounded bg-green-500'>example</div>"
 }

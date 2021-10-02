@@ -58,6 +58,7 @@
     <div
       v-show="activeTab === 1"
       class="
+        frame
         p-2
         min-h-44
         bg-gray-200
@@ -71,8 +72,8 @@
     >
       <slot name="component" />
     </div>
-    <div v-show="activeTab === 2" class="min-h-40 rounded">
-      <pre v-highlightjs="html"><code class="html rounded"></code></pre>
+    <div v-show="activeTab === 2" class="rounded ">
+      <pre v-highlightjs="html"><code class="html frame rounded"></code></pre>
     </div>
   </div>
 </template>
@@ -83,7 +84,7 @@ export default {
 
   data() {
     return {
-      activeTab: 2,
+      activeTab: 1,
     };
   },
 
@@ -101,4 +102,9 @@ export default {
 </script>
 
 <style>
+.frame {
+  min-height: 300px;
+  max-height: 700px;
+  overflow: auto;
+}
 </style>

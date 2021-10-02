@@ -81,7 +81,7 @@ computed: {
           </div>
         </div>
         <div class="h-7 w-7 text-gray-800">
-          <span href="https://github.com/adibemohamed/ready-tailwindcss" target="_blank">
+          <a href="https://github.com/adibemohamed/ready-tailwindcss" target="_blank">
             <svg
             version="1.1"
             class="h-full w-full"
@@ -125,7 +125,7 @@ computed: {
             <g></g>
             <g></g>
           </svg>
-          </span>
+          </a>
         </div>
       </div>
     </div>
