@@ -4,6 +4,7 @@ import Container from "./Container.vue";
 import componentsJSON from "./components.json";
 import Buttons from "./Buttons/index.vue";
 import ProductCard from "./ProductCard/index.vue";
+import Input from "./Input/index.vue";
 import Footer from "../../components/Footer.vue";
 
 export default {
@@ -14,6 +15,7 @@ export default {
     Container,
     Buttons,
     ProductCard,
+    Input,
     Footer,
   },
 
@@ -40,6 +42,13 @@ export default {
       <template #title>Product Card</template>
       <template #component>
         <ProductCard />
+      </template>
+    </Container>
+
+    <Container :html="components.input">
+      <template #title>Input</template>
+      <template #component>
+        <Input />
       </template>
     </Container>
   </div>
