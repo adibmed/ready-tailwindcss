@@ -1,15 +1,16 @@
 <script setup>
-  import Navbar from "../../components/Navbar.vue";
-  import Footer from "../../components/Footer.vue";
-  import componentsJSON from "./components.json";
+import Navbar from "../../components/Navbar.vue";
+import Footer from "../../components/Footer.vue";
+import componentsJSON from "./components.json";
 
-  import Container from "./Container.vue";
-  
-  import Buttons from "./Buttons/index.vue";
-  import ProductCard from "./ProductCard/index.vue";
-  import Alert from "./Alert/index.vue"
+import Container from "./Container.vue";
 
-  const components = componentsJSON
+import Buttons from "./Buttons/index.vue";
+import ProductCard from "./ProductCard/index.vue";
+import Alert from "./Alert/index.vue";
+import Avatar from "./Avatar/index.vue";
+
+const components = componentsJSON;
 </script>
 
 
@@ -33,7 +34,21 @@
     <Container :html="components.alert">
       <template #title>Alert</template>
       <template #component>
-        <Alert/>
+        <Alert />
+      </template>
+    </Container>
+
+    <Container :html="components.input">
+      <template #title>Input</template>
+      <template #component>
+        <Input />
+      </template>
+    </Container>
+
+    <Container :html="components.avatar">
+      <template #title>Avatar</template>
+      <template #component>
+        <Avatar />
       </template>
     </Container>
   </div>
