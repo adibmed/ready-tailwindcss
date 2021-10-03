@@ -1,16 +1,8 @@
-<script>
-import Navbar from "./Navbar.vue"
+<script setup>
+  import Navbar from "./Navbar.vue"
 
- export default {
-   name: "Header",
-    components: { Navbar },
-    data() {
-      return {
-        title: 'Ready Tailwindcss Components',
-        subtitle: 'Free & Ready Tailwindcss components'
-      }
-    }
- }
+  const title = 'Ready Tailwindcss Components'
+  const subtitle = 'Free & Ready Tailwindcss components'
 </script>
 
 <template>
