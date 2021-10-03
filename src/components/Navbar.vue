@@ -1,12 +1,8 @@
-<script>
-export default {
-  name: "Navbar",
-  computed: {
-    currentRouteName() {
-      return this.$route.name;
-    },
-  },
-};
+<script setup>
+  import { computed } from '@vue/reactivity';
+  import { useRoute } from 'vue-router'
+  const route = useRoute();
+  const currentRouteName = computed(() => route.name)
 </script>
 
 <template>
