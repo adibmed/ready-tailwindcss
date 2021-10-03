@@ -8,6 +8,7 @@ import Container from "./Container.vue";
 import Buttons from "./Buttons/index.vue";
 import ProductCard from "./ProductCard/index.vue";
 import Alert from "./Alert/index.vue";
+import Avatar from "./Avatar/index.vue";
 
 const components = componentsJSON;
 </script>
@@ -41,6 +42,13 @@ const components = componentsJSON;
       <template #title>Input</template>
       <template #component>
         <Input />
+      </template>
+    </Container>
+
+    <Container :html="components.avatar">
+      <template #title>Avatar</template>
+      <template #component>
+        <Avatar />
       </template>
     </Container>
   </div>
