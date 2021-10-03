@@ -1,28 +1,15 @@
-<script>
-import Navbar from "../../components/Navbar.vue";
-import Container from "./Container.vue";
-import componentsJSON from "./components.json";
-import Buttons from "./Buttons/index.vue";
-import ProductCard from "./ProductCard/index.vue";
-import Footer from "../../components/Footer.vue";
+<script setup>
+  import Navbar from "../../components/Navbar.vue";
+  import Footer from "../../components/Footer.vue";
+  import componentsJSON from "./components.json";
 
-export default {
-  name: "Components",
+  import Container from "./Container.vue";
+  
+  import Buttons from "./Buttons/index.vue";
+  import ProductCard from "./ProductCard/index.vue";
+  import Alert from "./Alert/index.vue"
 
-  components: {
-    Navbar,
-    Container,
-    Buttons,
-    ProductCard,
-    Footer,
-  },
-
-  data() {
-    return {
-      components: componentsJSON,
-    };
-  },
-};
+  const components = componentsJSON
 </script>
 
 
@@ -40,6 +27,13 @@ export default {
       <template #title>Product Card</template>
       <template #component>
         <ProductCard />
+      </template>
+    </Container>
+
+    <Container :html="components.alert">
+      <template #title>Alert</template>
+      <template #component>
+        <Alert/>
       </template>
     </Container>
   </div>

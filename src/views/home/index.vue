@@ -1,25 +1,13 @@
-<script>
+<script setup>
 import Footer from "../../components/Footer.vue";
 import Header from "../../components/Header.vue";
-export default {
-  name: "Home",
-  components: {
-    Header,
-    Footer,
-  },
-
-  data() {
-    return {
-      section_1: {
-        title: "UI Components",
-        message: `Free and open source ui components to use for your projects and apps.
-                  To speed up your desing process, boost your productiviy, save time and focus on many other tasks you don't 
-                  need to reinvent the wheel and start everything from scatch everytime your start a project. 
-                  Just copy and paste any component and Voila!`,
-      },
-    };
-  },
-};
+const section_1 = {
+  title: "UI Components",
+  message: `Free and open source ui components to use for your projects and apps.
+            To speed up your desing process, boost your productiviy, save time and focus on many other tasks you don't 
+            need to reinvent the wheel and start everything from scatch everytime your start a project. 
+            Just copy and paste any component and Voila!`,
+}
 </script>
 
 <template>
