@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10">
+  <div class="my-10">
     <div class="flex justify-between items-center px-1">
       <div class="py-3 text-2xl font-semibold flex-1 text-gray-700">
         <slot name="title" />
