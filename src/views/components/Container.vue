@@ -1,14 +1,15 @@
 <template>
-  <div class="mt-10">
+  <div class="my-10">
     <div class="flex justify-between items-center px-1">
       <div class="py-3 text-2xl font-semibold flex-1 text-gray-700">
         <slot name="title" />
       </div>
       <div>
         <button
+          v-tippy="'Result'"
           @click="activeTab = 1"
+          :class="activeTab == 1 ? 'bg-green-300' : 'bg-gray-200'"
           class="
-            bg-gray-200
             h-10
             w-10
             rounded-md
@@ -22,9 +23,10 @@
           <i class="far fa-eye"></i>
         </button>
         <button
+          v-tippy="'Source'"
           @click="activeTab = 2"
+          :class="activeTab == 2 ? 'bg-green-300' : 'bg-gray-200'"
           class="
-            bg-gray-200
             h-10
             w-10
             rounded-md
@@ -38,6 +40,7 @@
           <i class="fas fa-code"></i>
         </button>
         <button
+          v-tippy="'Copy to Clipboard'"
           @click="copyToClipBoard"
           class="
             bg-gray-200
@@ -78,27 +81,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["html"],
-
-  data() {
-    return {
-      activeTab: 1,
-    };
-  },
-
-  methods: {
-    copyToClipBoard() {
+<script setup>
+  import { ref, toRefs } from 'vue'
+  const props = defineProps({
+    html: String
+  })
+  const activeTab = ref(1)
+  const copyToClipBoard = () => {
+      const { html } = toRefs(props)
       const elem = document.createElement("textarea");
-      elem.value = this.html;
+      elem.value = html.value;
       document.body.appendChild(elem);
       elem.select();
       document.execCommand("copy");
       document.body.removeChild(elem);
-    },
-  },
-};
+  }
 </script>
 
 <style>

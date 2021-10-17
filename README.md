@@ -1,3 +1,4 @@
+<img src="./website_screenshot.png">
 # Ready TailwindCss
 
 ## Vue 3 + Vite

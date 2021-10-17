@@ -1,17 +1,13 @@
-<script>
-export default {
-  name: "Navbar",
-  computed: {
-    currentRouteName() {
-      return this.$route.name;
-    },
-  },
-};
+<script setup>
+  import { computed } from '@vue/reactivity';
+  import { useRoute } from 'vue-router'
+  const route = useRoute();
+  const currentRouteName = computed(() => route.name)
 </script>
 
 <template>
   <nav class="bg-green-300">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-2 sm:px-0">
       <div class="relative flex items-center justify-between py-3">
         <div class="flex-1 flex items-center">
           <router-link :to="{ name: 'home' }">
